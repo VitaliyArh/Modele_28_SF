@@ -410,7 +410,7 @@ def test_try_auth_with_ok():
     assert driver.current_url.__contains__('connect.ok.ru')
     driver.quit()
 
-# TK-016 Проверка перехода по ссылке, для авторизации через соц сеть Mail.ru
+# TK-018 Проверка перехода по ссылке, для авторизации через соц сеть Mail.ru
 def test_try_auth_with_mail():
     driver, wait = get_driver()
     wait.until(EC.presence_of_element_located((By.ID, 'oidc_mail'))).click()
@@ -419,7 +419,7 @@ def test_try_auth_with_mail():
     assert driver.current_url.__contains__('connect.mail.ru')
     driver.quit()
 
-# TK-016 Проверка перехода по ссылке, для авторизации через соц сеть Google
+# TK-019 Проверка перехода по ссылке, для авторизации через соц сеть Google
 def test_try_auth_with_google():
     driver, wait = get_driver()
     wait.until(EC.presence_of_element_located((By.ID, 'oidc_google'))).click()
@@ -428,7 +428,7 @@ def test_try_auth_with_google():
     assert driver.current_url.__contains__('accounts.google.com')
     driver.quit()
 
-# TK-016 Проверка перехода по ссылке, для авторизации через соц сеть Yandex
+# TK-020 Проверка перехода по ссылке, для авторизации через соц сеть Yandex
 def test_try_auth_with_yandex():
     driver, wait = get_driver()
     wait.until(EC.presence_of_element_located((By.ID, 'oidc_ya'))).click()
